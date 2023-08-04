@@ -1,0 +1,13 @@
+#Python
+#Exercise 3: Initializing the Main Window
+#Exercise 3: Initializing the Main Window
+- Task: Add a constructor to the main window class to perform initialization tasks such as setting the window title and icon.
+- Explanation: In this exercise, you need to add a constructor (__init__ method) to the MainWindow class. The constructor is called when an instance of the class is created and is used to perform any necessary initialization tasks. Here, you will set the window title and icon for the application.
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("ChatGPT")
+        self.resize(4000, 3000)
+        self.setWindowIcon(QIcon("./logo.png"))
+        main_widget = QWidget(self)
+        layout = QVBoxLayout(main_widget)
