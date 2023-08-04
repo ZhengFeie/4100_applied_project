@@ -1,0 +1,8 @@
+#Exercise 1: Importing Required Libraries and Modules
+#- Task: Import the necessary libraries and modules such as PyQt5 and other dependencies.
+# Explanation: In this exercise, you need to import the required libraries and modules for the application. These imports provide the necessary functionality for creating the GUI, handling speech recognition, and accessing the OpenAI API.
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QLineEdit
+from PyQt5.QtGui import QIcon
+import speech_recognition as sr
+import openai
