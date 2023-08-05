@@ -1,0 +1,13 @@
+#Exercise 1: Creating a Basic GUI Application
+#- Learn how to create a basic window using PyQt5, set the window size, title, icons, etc. The code is as follows:
+
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QLineEdit
+from PyQt5.QtGui import QIcon
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("ChatGPT")
+        self.resize(4000, 3000)
+        self.setWindowIcon(QIcon("./logo.png"))
