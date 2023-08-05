@@ -1,0 +1,5 @@
+#Exercise 4: Integrate OpenAI's GPT models
+#Learn how to use OpenAI's API and how to generate chat responses from user input.
+
+# Setting the OpenAI API Key
+openai.api_key = '...'
