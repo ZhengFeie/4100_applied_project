@@ -1,0 +1,15 @@
+# Exercise 6: Processing Speech Recognition
+# Learn how to use the Speech Recognition Library to convert a user's voice input into text.
+
+def start_speech_recognition(self):
+    try:
+        # speech recognition
+        text = self.recognize_speech()
+
+        # Display the recognition result in the input box
+        self.input_text.setText(text)
+
+    except sr.UnknownValueError:
+        self.response_label.setText("Speech recognition could not understand audio")
+    except sr.RequestError as e:
+        self.response_label.setText(f"Could not request results from speech recognition service; {e}")
