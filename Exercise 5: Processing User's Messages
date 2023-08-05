@@ -1,0 +1,13 @@
+#Exercise 5: Processing User's Messages
+#Learn how to process a user's message and generate the appropriate response
+
+def send_message(self):
+    try:
+        # Getting user input
+        user_input = self.input_text.text()
+
+        # Send a request to get a response
+        response = self.generate_chat_response(user_input)
+
+        # Displaying user input and responses on the Response tab control
+        self.response_label.setText(f"user input: {user_input}\n response: {response}")
