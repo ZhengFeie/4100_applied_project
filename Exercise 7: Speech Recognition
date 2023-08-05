@@ -1,0 +1,9 @@
+#Exercise 7: Speech Recognition
+#Learn how to use the speech_recognition library to capture speech from a microphone and convert it to text.
+
+def recognize_speech(self):
+    with sr.Microphone() as source:
+        print("Please speak.....")
+        audio = self.r.listen(source)
+    return self.r.recognize_google(audio, language='en-US')
+
