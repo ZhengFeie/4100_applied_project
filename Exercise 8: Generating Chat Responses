@@ -1,0 +1,12 @@
+#Exercise 8: Generating Chat Responses
+# Learn how to use OpenAI's API to generate chat responses based on user input.
+
+def generate_chat_response(self, message):
+    response = openai.Completion.create(
+        engine='text-davinci-003',
+        prompt=message,
+        max_tokens=2000,
+        n=1,
+        stop=None
+    )
+    return response.choices[0].text.strip()
