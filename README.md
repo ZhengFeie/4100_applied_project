@@ -5,7 +5,7 @@ Voice-Enabled Chatbot with PyQt5 and OpenAI
 -This project integrates the OpenAI GPT model with a PyQt5 GUI application to build a chatbot capable of understanding both text and voice input.
 
 Features:
--GUI Application: Utilizes the powerful PyQt5 library to create a user-friendly interface.
+-GUI Application: Utilizes the powerful PyQt5 library to create a user-friendly interface./n
 -Text Chat: Users can type their questions and get responses instantly.
 -Voice Recognition: With the integration of the speech_recognition library, users can also speak their queries.
 -Integration with OpenAI GPT: Harnesses the capabilities of OpenAI's GPT model to generate human-like responses to user queries.
