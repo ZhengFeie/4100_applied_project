@@ -1,0 +1,10 @@
+#Python
+#Exercise 3: Connecting Events
+- Learn how to connect button click events to specific functions.
+
+# Connect to the Send button click event
+self.send_button.clicked.connect(self.send_message)
+
+# Connecting Voice Recognition Button Click Events
+self.speech_button.clicked.connect(self.start_speech_recognition)
+
