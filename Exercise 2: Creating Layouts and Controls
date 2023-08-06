@@ -8,7 +8,7 @@ layout = QVBoxLayout(main_widget)
 
 # Creating Horizontal Layout and Tab Controls
 input_layout = QHBoxLayout()
-input_label = QLabel("输入:")
+input_label = QLabel("import:")
 input_layout.addWidget(input_label)
 
 # Creating Input Box Controls
@@ -16,11 +16,11 @@ self.input_text = QLineEdit()
 input_layout.addWidget(self.input_text)
 
 # Creating a Send Button Control
-self.send_button = QPushButton("发送")
+self.send_button = QPushButton("SEND")
 input_layout.addWidget(self.send_button)
 
 # Creating Voice Recognition Button Controls
-self.speech_button = QPushButton("语音识别")
+self.speech_button = QPushButton("speech recognition")
 input_layout.addWidget(self.speech_button)
 
 # Adding Horizontal Layout to Vertical Layout
