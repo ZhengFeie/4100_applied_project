@@ -11,3 +11,22 @@ def send_message(self):
 
         # Displaying user input and responses on the Response tab control
         self.response_label.setText(f"user input: {user_input}\n response: {response}")
+
+'''
+Detail Explanation:
+In this exercise, students will grasp the process of sending user messages and generating suitable responses using OpenAI's GPT models. Here's an explanation of the code:
+
+1.Getting User Input:
+
+The user_input variable is assigned the text entered by the user in the input box.
+
+2.Sending a Request to Get a Response:
+
+The generate_chat_response method is called with the user_input as an argument to generate a response.
+
+3.Displaying User Input and Response:
+
+The response_label control is updated with a formatted string that includes the user input and the generated response.
+If any errors occur during the process, an exception is caught and an error message is displayed.
+By implementing this code, students will be able to interact with the chatbot by entering messages and receiving appropriate responses from the GPT model.
+'''
