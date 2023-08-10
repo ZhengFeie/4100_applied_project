@@ -10,3 +10,18 @@ def generate_chat_response(self, message):
         stop=None
     )
     return response.choices[0].text.strip()
+'''
+Detail Explanation:
+In this exercise, students will understand how to utilize OpenAI's API to generate chat responses based on user input. Here's an explanation of the code:
+
+1.Generating Chat Responses:
+
+The generate_chat_response method takes the user's message as an argument.
+It uses OpenAI's Completion class to create a response based on the provided prompt (user message).
+The parameters include the GPT model's engine, the user's message as the prompt, a maximum number of tokens (words), and n set to 1 to retrieve a single response.
+The stop parameter specifies when the response should stop generating, and None means it will continue until reaching the maximum token limit.
+
+2.Returning the Response:
+
+The generated response text is extracted from the response object's choices and stripped of any leading or trailing whitespace.
+By implementing this code, students will be able to generate responses from the GPT model based on user input, providing dynamic interactions between the user and the chatbot.
