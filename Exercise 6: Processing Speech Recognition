@@ -13,3 +13,22 @@ def start_speech_recognition(self):
         self.response_label.setText("Speech recognition could not understand audio")
     except sr.RequestError as e:
         self.response_label.setText(f"Could not request results from speech recognition service; {e}")
+'''
+Detail Explanation:
+In this exercise, students will learn how to integrate speech recognition capabilities into their application using the Speech Recognition library. Here's an explanation of the code:
+
+1.Speech Recognition:
+
+The recognize_speech method is called to perform speech recognition using the user's microphone input.
+The recognized speech is converted into text.
+
+2.Displaying Recognition Result:
+
+The recognized text is set as the content of the input box (self.input_text).
+
+3.Handling Exceptions:
+
+If the speech recognition engine cannot understand the audio (sr.UnknownValueError), an appropriate error message is displayed.
+If there's an issue with requesting results from the speech recognition service (sr.RequestError), an error message related to the issue is shown.
+By implementing this code, students will enable their chatbot to accept voice input, convert it into text, and process it as if the user had typed the text.
+'''
