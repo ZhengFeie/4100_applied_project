@@ -7,7 +7,8 @@ openai.api_key = '...'
 Detail Explanation:
 In this exercise, students will learn how to integrate OpenAI's API into their application and generate chat responses using GPT models. Here's an explanation of the code:
 
-Setting the OpenAI API Key:
+
+1.Setting the OpenAI API Key:
 The openai.api_key is set to the OpenAI API key provided.
 This key is essential for authenticating and using OpenAI's services within the application.
 By setting the API key, students will be able to interact with OpenAI's GPT models to generate responses based on user input. This step is crucial to enabling the chatbot's functionality and providing meaningful interactions.
