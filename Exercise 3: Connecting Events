@@ -7,4 +7,18 @@ self.send_button.clicked.connect(self.send_message)
 
 # Connecting Voice Recognition Button Click Events
 self.speech_button.clicked.connect(self.start_speech_recognition)
+'''
+Detail Explanation:
+In this exercise, students will explore how to associate button click events with specific functions in a PyQt5 application. Here's an explanation of the code:
+
+Connect to the Send Button Click Event:
+
+The clicked signal of the self.send_button (SEND button) is connected to the send_message method.
+When the button is clicked, the send_message function will be executed.
+Connecting Voice Recognition Button Click Events:
+
+The clicked signal of the self.speech_button (speech recognition button) is connected to the start_speech_recognition method.
+When the voice recognition button is clicked, the start_speech_recognition function will be triggered.
+This exercise teaches students how to create interactions between GUI controls and functions. When buttons are clicked, corresponding functions are executed, allowing users to trigger specific actions within the application. By connecting events, students will be able to enhance user interactivity in their applications.
+'''
 
