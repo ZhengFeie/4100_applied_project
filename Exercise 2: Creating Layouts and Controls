@@ -34,30 +34,36 @@ layout.addWidget(self.response_label)
 Detail Explanation:
 In this exercise, students will delve into the concept of layout management and various control elements in PyQt5. Here's a breakdown of the code:
 
-Creating the Main Widget and Vertical Layout:
+1. Creating the Main Widget and Vertical Layout:
 
 A main widget is created to house the entire GUI layout.
 A vertical layout (QVBoxLayout) is established within the main widget.
-Creating a Horizontal Layout and Adding Control Labels:
+
+2. Creating a Horizontal Layout and Adding Control Labels:
 
 A horizontal layout (QHBoxLayout) is created to organize controls side by side.
 A label (QLabel) named "import:" is added to this horizontal layout.
-Creating Input Box Controls:
+
+3. Creating Input Box Controls:
 
 A text input box (QLineEdit) is generated for users to input text.
 The input box is added to the horizontal layout.
-Creating a Send Button Control:
+
+4. Creating a Send Button Control:
 
 A button (QPushButton) labeled "SEND" is added for sending inputs.
 The button is placed in the same horizontal layout.
-Creating Voice Recognition Button Controls:
+
+5. Creating Voice Recognition Button Controls:
 
 Another button for voice recognition is created and labeled "speech recognition."
 This button is also included in the horizontal layout.
-Adding the Horizontal Layout to the Vertical Layout:
+
+6. Adding the Horizontal Layout to the Vertical Layout:
 
 The horizontal layout, containing all the controls, is added to the vertical layout.
-Creating a Response Label Control:
+
+7. Creating a Response Label Control:
 
 A label control (QLabel) is established to display responses.
 This label is added to the vertical layout.
