@@ -11,3 +11,25 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("ChatGPT")
         self.resize(4000, 3000)
         self.setWindowIcon(QIcon("./logo.png"))
+
+
+'''
+Detail Explanation:
+In this exercise, you will learn how to use the PyQt5 library to create a fundamental graphical user interface (GUI) application window. Here's an explanation of the code:
+
+Import Necessary Libraries:
+
+sys: Used for system-related functionalities.
+PyQt5.QtWidgets: Used to create GUI elements using Qt Widgets.
+PyQt5.QtGui: Provides GUI-related functionalities.
+Create the MainWindow Class:
+
+Create a subclass based on the QMainWindow class.
+The __init__ method serves as the constructor for the class and is used for initializing the window.
+Set Window Title, Size, and Icon:
+
+Use self.setWindowTitle("ChatGPT") to set the window title as "ChatGPT."
+Use self.resize(400, 300) to set the initial window size to a width of 400 pixels and a height of 300 pixels.
+Use self.setWindowIcon(QIcon("./logo.png")) to set the window icon using the "logo.png" file located in the current directory.
+This exercise teaches you how to create a basic window and demonstrates setting the window title, size, and icon. Students can try running this code and experiment with adjusting the window title, size, and icon path to observe different effects. This exercise lays the foundation for learning PyQt5 and prepares you for subsequent exercises.
+'''
