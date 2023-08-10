@@ -7,3 +7,22 @@ def recognize_speech(self):
         audio = self.r.listen(source)
     return self.r.recognize_google(audio, language='en-US')
 
+'''
+Detail Explanation:
+In this exercise, students will learn how to use the speech_recognition library to capture spoken words from a microphone and convert them into text. Here's an explanation of the code:
+
+1. Using a Microphone as a Source:
+
+A statement is used to create a context for using the microphone as a source.
+The source variable captures the audio from the microphone.
+
+2. Capturing Audio:
+
+A message "Please speak..." is printed to prompt the user to start speaking.
+The listen method from the r object captures the audio input from the microphone and stores it in the audio variable.
+
+3. Converting Speech to Text:
+
+The captured audio is passed to the recognize_google method with the desired language parameter ('en-US' for English).
+The method returns the recognized speech as text.
+By implementing this code, students will enable their chatbot to capture voice input and convert it into text that can be processed and responded to by the application.
