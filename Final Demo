@@ -1,0 +1,106 @@
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QLineEdit
+from PyQt5.QtGui import QIcon
+
+import speech_recognition as sr
+import openai
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("ChatGPT")
+        self.resize(4000, 3000)
+        self.setWindowIcon(QIcon("./logo.png"))
+        # Creating Master Parts and Vertical Layouts
+        main_widget = QWidget(self)
+        layout = QVBoxLayout(main_widget)
+
+        # Creating Horizontal Layout and Tab Controls
+        input_layout = QHBoxLayout()
+        input_label = QLabel("输入:")
+        input_layout.addWidget(input_label)
+
+        # Creating Input Box Controls
+        self.input_text = QLineEdit()
+        input_layout.addWidget(self.input_text)
+
+        # Creating a Send Button Control
+        self.send_button = QPushButton("发送")
+        input_layout.addWidget(self.send_button)
+
+        # Creating Voice Recognition Button Controls
+        self.speech_button = QPushButton("语音识别")
+        input_layout.addWidget(self.speech_button)
+
+        # Adding Horizontal Layout to Vertical Layout
+        layout.addLayout(input_layout)
+
+        # Creating a Response Label Control
+        self.response_label = QLabel()
+        layout.addWidget(self.response_label)
+
+        # Connect to the Send button click event
+        self.send_button.clicked.connect(self.send_message)
+
+        # Connecting Voice Recognition Button Click Events
+        self.speech_button.clicked.connect(self.start_speech_recognition)
+
+        # Setting the OpenAI API Key
+        openai.api_key = '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'
+
+        # Creating a Recognizer object
+        self.r = sr.Recognizer()
+
+        # Set the main widget to be the center widget of the main window
+        self.setCentralWidget(main_widget)
+
+    def send_message(self):
+        try:
+            # Getting user input
+            user_input = self.input_text.text()
+
+            # Send a request to get a response
+            response = self.generate_chat_response(user_input)
+
+            # Displaying user input and responses on the Response tab control
+            self.response_label.setText(f"user input: {user_input}\n response: {response}")
+
+        except Exception as e:
+            self.response_label.setText(f"An error occurred: {e}")
+
+    def start_speech_recognition(self):
+        try:
+            # speech recognition
+            text = self.recognize_speech()
+
+            # Display the recognition result in the input box
+            self.input_text.setText(text)
+
+        except sr.UnknownValueError:
+            self.response_label.setText("Speech recognition could not understand audio")
+        except sr.RequestError as e:
+            self.response_label.setText(f"Could not request results from Google Speech Recognition service; {e}")
+        except Exception as e:
+            self.response_label.setText(f"An error occurred: {e}")
+
+    def recognize_speech(self):
+        with sr.Microphone() as source:
+            print("Please speak.....")
+            audio = self.r.listen(source)
+        return self.r.recognize_google(audio, language='en-US')
+
+    def generate_chat_response(self, message):
+        response = openai.Completion.create(
+            engine='text-davinci-003',
+            prompt=message,
+            max_tokens=2000,
+            n=1,
+            stop=None
+        )
+        return response.choices[0].text.strip()
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
