@@ -104,3 +104,40 @@ Step 8) After you click on “Finish,” the Following screen will appear.
 
 reference：https://www.guru99.com/how-to-install-python.html
 
+
+## Using PyInstaller for Windows:
+
+PyInstaller is a tool that allows you to package your Python application into a standalone executable for Windows. Here's how you can do it:
+
+Install PyInstaller:
+If you haven't already installed PyInstaller, you can do so by running the following command in the command line:
+
+### pip install pyinstaller
+
+Create an Executable:
+Open the command line, navigate to the directory containing your Python script, and use the following command to create an executable file:
+
+### pyinstaller --onefile your_script_name.py
+
+
+Replace your_script_name.py with the name of your Python script. This command will generate an executable file named your_script_name.exe.
+
+Generated Files:
+After running the above command, PyInstaller will create a dist folder in the same directory. This folder contains the generated executable file along with necessary files. You can package the contents of this dist folder into a ZIP file or organize them in a folder to distribute your application.
+
+## Using pkgbuild for macOS:
+
+pkgbuild is a tool on macOS used to create package files, often in the .pkg format. Here's how you can use it:
+
+Create an Application Folder:
+Create a folder and place your application's executable file inside it. For example, you can name the folder MyApp.app and place the executable file and required resources within it.
+
+Build the Package:
+Open the terminal and use the following command to create a .pkg package file:
+
+
+### pkgbuild --root /path/to/MyApp.app --identifier com.example.MyApp --version 1.0 --install-location /Applications MyInstaller.pkg
+
+Replace /path/to/MyApp.app with the actual path to your application folder. This command will create a .pkg package file named MyInstaller.pkg in the current directory.
+
+Please note that these methods are specific to their respective operating systems. PyInstaller is used to create Windows executables, while pkgbuild is used to create macOS package files. The generated files from each method are tailored to their respective platforms and cannot be directly used on the other platform.
